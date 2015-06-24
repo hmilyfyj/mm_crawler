@@ -1,7 +1,7 @@
-依赖
+#依赖
 bs4
 
-#实现：
+#实现了
 多线程、带参
 
 #实现步骤
@@ -12,7 +12,7 @@ bs4
 5.步骤3.4循环往复直到相关变量达到定义的临界值，如:线程数量、下载图片数、用户发出中断。
 
 #关于复用：
-修改crawl(url) get_url_prefix(url) get_host(url)三个函数中的正则匹配
+需要修改crawl(url) get_url_prefix(url) get_host(url)三个函数中的正则匹配
 
 #缺点：
 没有使用代理IP
