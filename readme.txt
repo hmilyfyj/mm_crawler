@@ -1,10 +1,11 @@
 #测试环境
-py 2.7.9
+py 2.7.9 windows
+py 2.7.1 linux
 
 #依赖
 BeautifulSoup4
 
-#usage：
+#usage
 mm_crawler.py usage:                                                                                                                                                 
 -h print help message.                                                                                                                                               
 -n INTEGER:define num of thread.Default=10                                                                                                                           
