@@ -1,3 +1,6 @@
+#测试环境
+py 2.7.9
+
 #依赖
 bs4
 
@@ -11,14 +14,14 @@ bs4
 
 3.crawl(url)：下载并保存该页面图片（过滤非相关图片）。并对页面超链的抓取，并将其存入任务队列page_que。
 
-4.创建线程,线程调用从page_que获取url,并调用crawl（url)
+4.创建线程,线程从page_que获取url,并调用crawl（url)
 
 5.步骤3.4循环往复直到相关变量达到定义的临界值，如:线程数量、下载图片数、用户发出中断。
 
 
 #关于复用：
-需要修改crawl(url) get_url_prefix(url) get_host(url)三个函数中的正则匹配
+修改crawl(url) get_url_prefix(url) get_host(url)三个函数中的正则匹配即可。
 
 #缺点：
-没有使用代理IP
-没有设置header
+没有使用代理IP。
+没有设置header。
