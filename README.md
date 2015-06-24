@@ -2,10 +2,18 @@
 py 2.7.9
 
 #依赖
-bs4
+BeautifulSoup4
+
+#usage：
+mm_crawler.py usage:                                                                                                                                                 
+-h print help message.                                                                                                                                               
+-n INTEGER:define num of thread.Default=10                                                                                                                           
+-o PATH_STR:define dir for download.                                                                                                                                 
+-l INTEGER:max images
+
 
 #实现了
-多线程、带参
+多线程、带参、可复用
 
 #实现步骤
 1.初始化thread_max_num等关键变量。

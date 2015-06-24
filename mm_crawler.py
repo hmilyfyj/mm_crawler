@@ -43,6 +43,9 @@ def get_soup_html(url):
 #获取图片并下载。
 def get_img(soup):
 	global img_count,img_max_num,mutex
+	if(img_count>img_max_num and not img_max_num==0):
+		print "reach the img_max_num，thread exited\n"
+		sys.exit(0)
 	for img in soup.findAll('img',src=True):
 		if re.findall(r'\d+_\d+',img['src']):
 			imgurl=img['src']
@@ -53,9 +56,7 @@ def get_img(soup):
 				mutex.acquire()
 				img_count=img_count+1
 				mutex.release()
-			if(img_count>img_max_num and not img_max_num==0):
-				print "reach the img_max_num，thread exited\n"
-				sys.exit(0)
+
 
 #获取网址的最后一个/之前的部分			
 def get_url_prefix(url):
