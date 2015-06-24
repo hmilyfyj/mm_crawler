@@ -1,6 +1,6 @@
 #≤‚ ‘ª∑æ≥
- - py 2.7.9 windows
- - py 2.7.1 linux
+ - py 2.7.9 Windows
+ - py 2.7.1 Linux
 
 #“¿¿µ
 BeautifulSoup4
