@@ -50,11 +50,11 @@ def get_img(soup):
 		if re.findall(r'\d+_\d+',img['src']):
 			imgurl=img['src']
 			print imgurl
-			print "第%d次\n"%img_count
 			result=save_img_by_url(imgurl,dir)
 			if result==1:
 				mutex.acquire()
 				img_count=img_count+1
+				print u'第%d次\n'%img_count
 				mutex.release()
 
 
@@ -139,7 +139,7 @@ def main(argv):
 	while page_que.qsize()>0 and img_count<=img_max_num or img_max_num==0:
 		while threading.activeCount()<=thread_max_num:
 			t=threading.Thread(target=work)
-			t.setDeamon(True)
+			t.deamon=True
 			t.start()
 	
 if __name__=='__main__':
